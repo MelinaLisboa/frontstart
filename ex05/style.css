@@ -1,0 +1,33 @@
+@charset 'UTF-8';
+
+body{
+    margin: 0;
+}
+
+div{
+    border: 1px solid blue;
+    height: 200px;
+    width: 200px;
+}
+
+.container{
+    background: gray;
+    height: 100%;
+    width: 100%;
+    margin-top: 50px;
+    position: relative;
+}
+
+p{
+    height: 1000px;
+    background: rgb(151, 96, 151);
+}
+
+#teste{
+    background: red;
+    /* position: fixed; fica fixo no topo */
+    position: sticky; /*volta para o lugar original, mas ao rodar o scroll e chegar em top 0, fica fixo como menu, ex. colocar um banner acima do menu*/
+    top: 0;
+    height: 65px;
+    width: 100%;
+}

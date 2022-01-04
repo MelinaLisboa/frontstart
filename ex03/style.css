@@ -1,0 +1,28 @@
+@charset 'UTF-8';
+
+header{
+    background: purple;
+    height: 50vh; /*Ocupa 100% da tela*/
+    width: 50vw;
+}
+
+        /*em vs rem*/
+        /*em -> sempre relativo a classe pai*/
+
+body{
+    font-size: 14px;
+}
+
+div{
+    /*font-size: 1.2em;*/
+    /*Resultado abaixo*/
+    /*primeira -> 1.2 x 14 = 16.8*/
+    /*segunda -> 1.2 x 16.8 = 20.16*/
+    /*terceira -> 1.2 x 20.16 = 24.192*/
+
+    font-size: 1.2rem;/*Resultado abaixo (mais usado)*/
+    /*primeira -> 1.2 x 14 = 16.8*/
+    /*segunda -> 1.2 x 14 = 16.8*/
+    /*terceira -> 1.2 x 14 = 16.8*/
+    
+}

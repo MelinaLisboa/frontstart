@@ -1,0 +1,21 @@
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;800&display=swap');
+
+/*tag html*/
+h1, h2, h6{
+    color: blue;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*id*/
+#my-title{
+    font-size: 2rem;
+}
+
+/*classe*/
+.bold{
+    font-weight: 800; /*900 da fonte importada do google fonts*/
+}
