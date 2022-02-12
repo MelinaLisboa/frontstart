@@ -11,6 +11,7 @@ input{
     padding-left: 45px;
 }
 
+/*tag para estilizar a tag i é a svg*/
 svg{
     position: absolute;
     left: 10px;
