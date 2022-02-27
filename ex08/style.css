@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;700;900&display=swap');
+
+/* Propriedades que resetamos ao iniciar um novo projeto */
+*{
+    box-sizing: border-box;
+}
+
+/* tem q especificar as próximas tag após body porque elas não pegam a fonte por padrão */
+body, button, input, select, textarea{
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body{
+    margin: 0;
+}
+
+:root{
+    /* cria a variável para usar dentro do projeto, ao inves de usar hexadecimal ou rgb */
+    --dark-blue: rgb(76, 76, 133);
+}
+
+/* Propriedades que resetamos ao iniciar um novo projeto */
+
+div {
+    background: red;
+    width: 250px;
+    height: 250px;
+    border: 100px solid var(--dark-blue);
+    padding: 10px;
+}
+
+button {
+    background: var(--dark-blue);
+}

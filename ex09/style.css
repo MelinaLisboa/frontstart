@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;700;900&display=swap');
+
+body, button, input, select, textarea{
+    font-family: 'Roboto', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+}
+
+:root{
+    --dark-blue: rgb(89, 89, 196);
+}
+
+.container{
+    width: 150px;
+    height: 500px;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.light{
+    width: 50px;
+    height: 50px;
+    background: red; 
+    border-radius: 50%;
+    margin: 10px;
+}
+
+/*
+ display: flex;
+ flex-direction: row  (por default é row, mas posso definir para column)
+ justify-content: alinhamento horizontal
+ align-items: alinhamento vertical
+
+ flex-direction: column
+ justify-content: alinhamento vertical
+ align-items: alinhamento horizontal
+
+ Opcoes:
+
+ center -> alinha no centro
+ space-around -> espaço entre (coloca um pouco de espaço de cada lado)
+ space-between -> espaço entre (só no meio)
+ space-evenly -> espaço igual em todos os lados
+ flex-start -> no inicio
+ flex-end -> no fim
+*/
