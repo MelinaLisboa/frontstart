@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;700;900&display=swap');
+
+body, button, input, select, textarea{
+    font-family: 'Roboto', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+    width: 200px;
+    height: 150px;
+    background: grey;
+    margin: 10px 0;
+}

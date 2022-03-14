@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Clima Tempo</title>
+    <link rel="stylesheet" href="style.css">    
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>  
+
+    <div class="iphone-container">
+        <div class="notch"></div>
+        <div class="today-temp">
+            <i class="top-icon" data-feather="cloud-lightning"></i>
+            <h3>PARTLY CLOUDY</h3>
+            <p class="city-name">Porto Alegre, Br</p>
+            <h1>24°</h1>
+        </div>
+        <div class="week">
+            <div class="day">
+                <p class="week-day">WED</p>
+                <i data-feather="cloud-lightning"></i>
+                <p class="temperature">20°</p>
+            </div>
+            <div class="day">
+                <p class="week-day">THU</p>
+                <i data-feather="cloud-drizzle"></i>
+                <p class="temperature">16°</p>
+            </div>
+            <div class="day">
+                <p class="week-day">FRI</p>
+                <i data-feather="cloud-lightning"></i>
+                <p class="temperature">14°</p>
+            </div>
+            <div class="day">
+                <p class="week-day">SAT</p>
+                <i data-feather="cloud-drizzle"></i>
+                <p class="temperature">20°</p>
+            </div>
+            <div class="day">
+                <p class="week-day">SUN</p>
+                <i data-feather="cloud-lightning"></i>
+                <p class="temperature">20°</p>
+            </div>
+            <div class="day">
+                <p class="week-day">MON</p>
+                <i data-feather="sun"></i>
+                <p class="temperature">24°</p>
+            </div>
+            <div class="day">
+                <p class="week-day">TUE</p>
+                <i data-feather="sun"></i>
+                <p class="temperature">25°</p>
+            </div>
+        </div>
+        <div class="footer">
+            <i data-feather="sunrise"></i>
+            <i data-feather="sunset"></i>
+            <i data-feather="wind"></i>
+        </div>
+        <div class="iphone-menu"></div>
+    </div>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

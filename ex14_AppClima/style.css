@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&family=Roboto:wght@300;700;900&display=swap');
+
+body, button, input, select, textarea{
+    font-family: 'Poppins', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Para centralizar verticalmente é necessário colocar a altura */
+    height: 100vh;
+}
+
+:root{
+    --dark-blue: #1D1D1D;
+    --light-grey: #BFBFC1
+}
+
+h1{
+    font-size: 70px;
+    font-weight: 300;
+    margin: 0;
+}
+
+h3{
+    font-weight: 400;
+}
+
+.iphone-container{
+    width: 350px;
+    height: 680px; /*o dela ta 700px*/
+    background: var(--dark-blue);
+    border-radius: 45px;
+    border: 20px solid #111;
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 70px 20px 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.iphone-container .notch{
+    width: 180px;
+    height: 25px;
+    background: #111;
+    border-radius: 0 0 30px 30px;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 90px);
+}
+
+.iphone-container .iphone-menu{
+    width: 90px;
+    height: 3px;
+    background: var(--light-grey);font-weight: ;
+    border-radius: 8px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 20px;
+    left: calc(50% - 45px)
+}
+
+.iphone-container .top-icon{
+    width: 50px;
+    height: 50px;
+}
+
+.iphone-container .city-name{
+    font-weight: 300;
+    color: var(--light-grey);
+}
+
+.iphone-container .week{
+    display: flex;
+    justify-content: space-between;
+}
+
+.iphone-container .week .day .week-day{
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.iphone-container .week .day .temperature{
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.iphone-container .footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.iphone-container .footer svg{
+    width: 30px;
+    height: 30px;
+}

@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;700;900&display=swap');
+
+body, button, input, select, textarea{
+    font-family: 'Roboto', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+}
+
+:root{
+    --dark-blue: rgb(89, 89, 196);
+}
+
+.container {
+    background: rgb(226, 127, 226);
+    height: 600px;
+
+    display: flex;
+    align-items: center;
+    
+    /* alinhando elementos horizontalmente */
+    /*
+    Uma forma de fazer:
+
+    width: fit-content;
+    margin: 100px auto;
+
+    outra forma de fazer:
+
+    display: flex;
+    justify-content: center;
+    */
+
+    /* alinhando elementos verticalmente */
+    /* 
+        Na vertical não tem opção de usar o margin,
+        pois ele não funciona
+
+        *Para centralizar desta forma precisa ter o height definido na classe pai, nao pode ser fit-content em height
+
+     display: flex;
+     align-items: center;
+     */
+}
+
+.card {
+    background: grey;
+    width: 200px;
+    height: 250px;
+    display: inline-block;
+    margin: 0 10px;
+}
