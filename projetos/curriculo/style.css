@@ -141,7 +141,11 @@ Quanto mais pontos de quebra, mais difícil de manter o código */
     }
 
     nav{
+        position: fixed;
+        width: 100%;
+        bottom: 0;
         padding: 0 15px;
+        top: unset;
     }
 
     nav img{
