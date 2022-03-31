@@ -222,6 +222,25 @@ Quanto mais pontos de quebra, mais difícil de manter o código */
     .about-me .img-container{
         margin: 70px 0;
     }
+
+    .services {
+        padding: 0;
+    }
+
+    .services .services-container{
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        height: 394px;
+    }
+
+    .service-card + .service-card{
+        margin-left: 0;
+        margin-top: 30px;
+    }
 }
 
 /* tablet: quando estiver abaixo deste valor, sobrescreve o de cima */
@@ -269,6 +288,14 @@ Quanto mais pontos de quebra, mais difícil de manter o código */
 
     .about-me {
         padding: 40px;
+    }
+
+    .services {
+        margin: 70px 0;
+    }
+
+    .services .services-container {
+        padding: 0 20px;
     }
     
 }
