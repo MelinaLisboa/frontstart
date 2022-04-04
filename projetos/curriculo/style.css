@@ -5,6 +5,7 @@
     --green: #15CDCB;
     --bg-dark: #212226;
     --light-grey: #E0DEDE;
+    --medium-grey: #2F3034;
 
     --menu-height: 75px;
 }
@@ -48,6 +49,21 @@ button{
     color: white;
     font-weight: bold;
     font-size: 18px;
+}
+
+.secondary-button {
+    background: var(--medium-grey);
+    border: 1px solid var(--purple);
+    color: var(--green);
+    font-weight: bold;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+}
+
+.secondary-button img {
+    margin-right: 15px;
 }
 
 .title-purple{
@@ -262,7 +278,30 @@ p {
     margin: 0;
 }
 
+.curriculum{
+    padding: 0 100px;
+    text-align: center;
+}
 
+.curriculum .container {
+    display: flex;
+    margin: 50px 0;
+}
+
+.curriculum .container .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    width: 100%;
+}
+
+.curriculum .container .content .curriculum-info{ 
+    display: grid;
+    grid-template-columns: 150px auto;
+    grid-gap: 1rem;
+    margin-bottom: 50px;
+}
 
 /* RESPONSIVIDADE */
 
