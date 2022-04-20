@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Active Item / Show hide text</title>
+</head>
+<body>
+    <ul>
+        <li class="item active" data="service">Serviços</li>
+        <li class="item" data="contact">Contato</li>
+        <li class="item" data="info">Informações</li>
+    </ul>
+
+    <div id="serviceText"><p>Service Text</p></div>
+    <div id="contactText"><p>Contact Text</p></div>
+    <div id="infoText"><p>Info Text</p></div>
+
+    <script>
+         const serviceText = document.getElementById('serviceText');
+         const contactText = document.getElementById('contactText');
+         const infoText = document.getElementById('infoText');
+        hideOrShowTextDiv('service');
+ 
+        const items = Array.from(document.getElementsByClassName('item'));
+
+        items.forEach(item => {
+            item.addEventListener('click', onItemClick);
+        });
+
+        function onItemClick(event){            
+            const selectedAttribute = event.target.getAttribute('data');
+            addOrRemoveActive(selectedAttribute);
+            hideOrShowTextDiv(selectedAttribute);
+        }
+
+        function hideOrShowTextDiv(selectedAttribute){
+
+            hideTextElements();
+
+            if(selectedAttribute === 'contact'){
+                contactText.style.display = 'block';
+            }
+
+            if(selectedAttribute === 'service'){
+                serviceText.style.display = 'block';
+            }
+
+            if(selectedAttribute === 'info'){
+                infoText.style.display = 'block';
+            }
+        }
+        
+        function addOrRemoveActive(selectedAttribute){
+            items.forEach(item => {
+                const itemAttribute = item.getAttribute('data');
+                if(itemAttribute === selectedAttribute){
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                } 
+            })
+        }
+
+        function hideTextElements(){
+            serviceText.style.display = 'none';
+            contactText.style.display = 'none';
+            infoText.style.display = 'none';
+        }
+
+
+        //Função como parâmetro
+        const clients = [
+            {name: 'melina', lastName: 'lisboa', age: '39'},
+            {name: 'gustavo', lastName: 'alves', age: '41'},
+            {name: 'solange', lastName: 'adelino', age: '65'},
+            {name: 'magno', lastName: 'lisboa', age: '66'},
+        ];
+
+        //Arrow Function
+        const ageGreaterThan60 = (item) => item.age > 60;
+        const completeName = (item) => `${item.name} ${item.lastName}`;
+
+        //console.log(clients.find(item => item.age === '66'));
+        //console.log(clients.find(isGreaterThan60)); // é melhor fazer desta forma, programação funcional
+        console.log(clients.filter(ageGreaterThan60));
+
+        console.log(clients.map(completeName));
+
+        //For vs forEach
+
+        const numbers = [3,5,1,2,0];
+
+        for(let i=0; i < numbers.length; i++){
+            console.log(numbers[i]);
+        }
+
+        numbers.forEach(number => console.log(number));
+        numbers.forEach((number, index) => console.log(index));
+
+    </script>
+</body>
+</html>
