@@ -1,23 +1,26 @@
 <template>
   <div class="home">
     <CategoryMenu />
+    <ItemsList />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import CategoryMenu from "@/components/CategoryMenu.vue";
-import axios from "axios";
+import ItemsList from "@/components/ItemsList.vue";
 
 export default {
   name: "HomeView",
   components: {
     CategoryMenu,
-  },
-  created() {
-    axios.get("http://localhost:3000/burguers").then((response) => {
-      console.log(response);
-    });
-  },
+    ItemsList
+},
 };
 </script>
+
+<style scoped lang="less">
+  .home {
+    display: flex;
+  }
+</style>
