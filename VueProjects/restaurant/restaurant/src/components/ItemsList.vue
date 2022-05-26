@@ -28,5 +28,10 @@ export default {
     .items-list {
         margin: 50px;
         display: flex;
+
+        @media @tablets {
+          flex-wrap: wrap;
+          margin: 20px;
+        }
     }
 </style>
