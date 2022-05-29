@@ -1,6 +1,10 @@
 <template>
   <div class="items-list">
-    <ItemRest v-for="itemRest in itemsList" :key="itemRest.id" :itemRest="itemRest" />
+    <ItemRest
+      v-for="itemRest in itemsList"
+      :key="itemRest.id"
+      :itemRest="itemRest"
+    />
   </div>
 </template>
 <script>
@@ -17,21 +21,38 @@ export default {
       itemsList: [],
     };
   },
-  created() {
-    axios.get("http://localhost:3000/burguers").then((response) => {
-      this.itemsList = response.data;
-    });
+  created() {},
+  computed: {
+    selectedCategory: {
+      get() {
+        return this.$store.state.selectedCategory;
+      },
+    },
   },
+  methods: {
+    getItemsList() {
+      axios
+        .get(`http://localhost:3000/${this.selectedCategory}`)
+        .then((response) => {
+          this.itemsList = response.data;
+        });
+    }
+  },
+  watch: {
+    selectedCategory() {
+      this.getItemsList();
+    }
+  }
 };
 </script>
 <style lang="less" scoped>
-    .items-list {
-        margin: 50px;
-        display: flex;
+.items-list {
+  margin: 50px;
+  display: flex;
 
-        @media @tablets {
-          flex-wrap: wrap;
-          margin: 20px;
-        }
-    }
+  @media @tablets {
+    flex-wrap: wrap;
+    margin: 20px;
+  }
+}
 </style>
