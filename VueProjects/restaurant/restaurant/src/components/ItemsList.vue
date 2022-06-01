@@ -27,10 +27,8 @@ export default {
   },
   created() {},
   computed: {
-    selectedCategory: {
-      get() {
+    selectedCategory() {
         return this.$store.state.selectedCategory;
-      },
     },
   },
   methods: {
@@ -45,7 +43,7 @@ export default {
           this.itemsList = response.data;
           this.isLoading = false;
         });
-      }, 2000); //2 segundos
+      }, 1000); //1 segundo
     }
   },
   watch: {
@@ -63,7 +61,8 @@ export default {
 
   @media @tablets {
     flex-wrap: wrap;
-    margin: 20px;
+    margin: 0;
+    padding: 20px;
   }
 }
 </style>
