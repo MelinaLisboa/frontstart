@@ -55,12 +55,13 @@ export default {
 </script>
 <style lang="less" scoped>
 .items-list {
+  width: 100%;
   margin: 50px;
   display: flex;
-  width: 100%;
+  flex-wrap: wrap;
 
   @media @tablets {
-    flex-wrap: wrap;
+    flex-wrap: wrap; //quebrar a linha
     margin: 0;
     padding: 20px;
   }
