@@ -1,17 +1,23 @@
 <template>
   <div class="cart-item">
-    {{item.quantity}}
+    <div class="cart-item--quantity">
+      <span class="buttons" @click="decreaseQuantity(item.id)">-</span>
+      <span class="number">{{ item.quantity }}</span>
+      <span class="buttons" @click="increaseQuantity(item.id)">+</span>
+    </div>
     <div class="cart-item--img-container">
-        <img class="cart-item--img" :src="imagePath" />
+      <img class="cart-item--img" :src="imagePath" />
     </div>
     <div class="content">
       <h3 class="cart-item--name">{{ item.name }}</h3>
       <a class="cart-item--observation">Adicionar Observação</a>
     </div>
-    <p class="cart-item--price">{{ item.price | currency}}</p>
+    <p class="cart-item--price">{{ item.price | currency }}</p>
   </div>
 </template>
 <script>
+import { mapActions } from 'vuex';
+
 export default {
   name: "CartItem",
   props: {
@@ -29,6 +35,12 @@ export default {
       return require(`../assets/images/${this.item.id}.png`);
     },
   },
+  methods: {
+    ...mapActions([
+      'increaseQuantity',
+      'decreaseQuantity'
+    ])
+  },
 };
 </script>
 
@@ -37,45 +49,65 @@ export default {
   display: flex;
   padding: 20px 0;
   border-bottom: 1px solid @light-grey;
+  
+  &--quantity {
+    display: flex;
+    align-items: center;
+    padding-right: 40px;
+
+    .number {
+      font-weight: 500;
+      font-size: 18px;
+      color: @yellow;
+      width: 28px;
+      text-align: center;
+    }
+
+    .buttons {
+      font-weight: 600;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  }
 
   &--img-container {
-      border-radius: 8px;
-      background: @light-yellow;
-      width: 81px;
-      height: 66px;
-      display: flex;
-      align-items: center;
+    border-radius: 8px;
+    background: @light-yellow;
+    width: 81px;
+    height: 66px;
+    display: flex;
+    align-items: center;
   }
 
   &--img {
     width: 65px;
     display: block;
-    margin: auto    ;
+    margin: auto;
   }
 
   &--name {
-      font-weight: 600;
-      font-size: 18px;
-      margin: 0;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 0;
   }
 
   &--observation {
-      font-weight: 500;
-      font-size: 12px;
-      color: @dark-grey;
-      text-decoration: underline;
+    font-weight: 500;
+    font-size: 12px;
+    color: @dark-grey;
+    text-decoration: underline;
   }
 
   .content {
-      flex-grow: 1;
-      padding: 0 20px;
+    flex-grow: 1;
+    padding: 0 20px;
   }
 
   &--price {
-      font-weight: 600;
-      font-size: 18px;
-      line-height: 27px;
-      color: @yellow;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    color: @yellow;
   }
 }
 </style>
