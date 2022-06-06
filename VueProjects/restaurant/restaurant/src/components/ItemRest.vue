@@ -27,11 +27,8 @@ export default {
     itemRest: {},
   },
   computed: {
-    selectedCategory() {
-      return this.$store.state.selectedCategory;
-    },
     imagePath() {
-      return require(`../assets/images/${this.selectedCategory}/${this.itemRest.id}.png`);
+      return require(`../assets/images/${this.itemRest.id}.png`);
     },
   },
   methods: {
